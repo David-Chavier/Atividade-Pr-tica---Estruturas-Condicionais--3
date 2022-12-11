@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP-ECQ18</title>
+</head>
+<body>
+    <script>
+
+        //         Uma loja de eletrodomésticos estabeleceu as seguintes
+        // modalidades de pagamento para a venda de suas mercadorias:
+
+        // Escreva um algoritmo que armazene o preço de tabela e o número
+        // de vezes em que o pagamento será feito. Calcule o valor de cada
+        // parcela e o preço total da compra e imprima no console.
+
+        const preçodetabela = parseFloat(prompt('Preço na tabela'))
+        const avistaouparcelado = prompt('método de pagamento, digite: [1] para à vista ou [2] para parcelado?')
+
+
+        if(avistaouparcelado == '1'){
+        console.log(`R$${preçodetabela.toFixed(2)} - 2.5% de desconto = R$${(preçodetabela - ((preçodetabela * 2.5) / 100)).toFixed(2)}`)
+        }else if(avistaouparcelado == '2'){
+
+            const parcelamento = parseInt(prompt('Em quantas parcelas quer dividir?'))
+
+            if(parcelamento >= 2 && parcelamento <= 5){
+                console.log(`Preço sem juros ou descontos R$${preçodetabela.toFixed(2)}`)
+            }else if(parcelamento >= 6 && parcelamento <= 10){
+                console.log(`R$${preçodetabela.toFixed(2)} + 6% de juros = R$${(preçodetabela + ((preçodetabela * 6) / 100)).toFixed(2)}`)
+            }else if(parcelamento >= 11 && parcelamento <= 15){
+                console.log(`R$${preçodetabela.toFixed(2)} + 13% de juros = R$${(preçodetabela + ((preçodetabela * 13) / 100)).toFixed(2)}`)
+            }else{
+                console.log('parcelamento máximo de 15x')
+            }
+
+        }else{
+            console.log('Escolha uma forma de pagamento válida.')
+        }
+
+    </script>
+</body>
+</html>

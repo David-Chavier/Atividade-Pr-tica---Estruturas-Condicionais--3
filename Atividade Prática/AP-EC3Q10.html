@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP-ECQ10</title>
+</head>
+<body>
+    <script>
+
+        //       Tendo como entrada a altura e o sexo (codificado da seguinte
+        // forma: 1 para sexo feminino e 2 para sexo masculino) de uma
+        // pessoa, construa um programa que calcule e mostre seu peso ideal,
+        // utilizando as seguintes fórmulas:
+        // - para homens: (72.7 * Altura) – 58
+        // - para mulheres: (62.1 * Altura) – 44.7
+        
+        const altura = parseFloat(prompt('Altura'))
+        const sexo = prompt('Digite: \n [1] para sexo feminino \n [2] para sexo masculino ')
+        switch(sexo){
+            case '1':
+                document.write(`Peso ideal: ${altura * 62.1}kg`)
+                break;
+            case '2':
+                document.write(`Peso ideal: ${altura * 72.7}kg`)
+                break;
+        }
+
+    </script>
+</body>
+</html>
